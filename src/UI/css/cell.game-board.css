@@ -1,0 +1,56 @@
+#game-board {
+    border-collapse: collapse;
+    border-radius: 5px;
+    width: 100%;
+    border-color: #66ccff;
+    border-width: 3px;
+}
+
+.game-board-grid {
+	text-align: center;
+    color: brown;
+	vertical-align: middle!important;
+    white-space : pre;
+    font-family: monospace;
+    border-width: 1px;
+}
+
+.game-board-grid.immutable {
+    color: black;
+    font-size:xx-large;
+}
+
+.game-board-grid.x0, .game-board-grid.x3, .game-board-grid.x6 {
+    border-top-width: 3px;
+    border-top-color: #66ccff;
+}
+
+.game-board-grid.x2, .game-board-grid.x5, .game-board-grid.x8 {
+    border-bottom-width: 3px;
+    border-bottom-color: #66ccff;
+}
+
+.game-board-grid.y0, .game-board-grid.y3, .game-board-grid.y6 {
+    border-left-width: 3px;
+    border-left-color: #66ccff;
+}
+
+.game-board-grid.y2, .game-board-grid.y5, .game-board-grid.y8 {
+    border-right-width: 3px;
+    border-right-color: #66ccff;
+}
+
+.game-board-grid.marked {
+    background: url("../fonts/glyphicons-338-pin-flag.png");
+    background-repeat:no-repeat;
+    background-size: 10px;
+    background-position:right top;
+}
+
+#pause-button {
+    width: 6em
+}
+
+.timer {
+    text-align: center;
+}

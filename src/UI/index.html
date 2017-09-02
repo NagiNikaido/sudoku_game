@@ -1,0 +1,201 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sudoku Game</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/cell.button.css">
+	<link rel="stylesheet" type="text/css" href="css/cell.game-board.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<h2>Sudoku Game</h2>
+			</div>
+			<div class="col-md-6">
+				<div class="row"><p></div>
+				<div class="row"><p></div>
+				<div class="btn-group" role="group">
+					<button id="new-game-button" type="button" class="btn btn-lg btn-primary">新游戏</button>
+					<button id="pause-button" type="button" class="btn btn-lg btn-primary" disabled="disabled">暂停</button>
+                    <button id="reset-button" type="button" class="btn btn-lg btn-primary" disabled="disabled">重来</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+	<div class="container">
+        <div class="row"><p></p></div>
+		<div class="row">
+			<div id="game-board-col" class="col-md-7">
+				<table id="game-board" border="1">
+					<tr>
+						<td class="game-board-grid"></td>
+						<td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+					</tr>
+                    <tr>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                    </tr>
+                    <tr>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                    </tr>
+                    <tr>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                    </tr>
+                    <tr>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                    </tr>
+                    <tr>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                    </tr>
+                    <tr>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                    </tr>
+                    <tr>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                    </tr>
+                    <tr>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                        <td class="game-board-grid"></td>
+                    </tr>
+				</table>
+			</div>
+            <div id="margin" class="col-md-1"></div>
+			<div id="control-pad" class="col-md-3">
+
+                <div class="row">
+                    <h4>游戏时间：</h4>
+                    <h1 class="timer">00:00:00</h1>
+                </div>
+                <div class="row"><br><br></div>
+                <div class="row">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button id="level-decrease-button" class="btn btn-default" type="button">难度-1</button>
+                        </span>
+                        <input id="level" type="text" class="form-control" value="1" readonly="true">
+                        <span class="input-group-btn">
+                            <button id="level-increase-button" class="btn btn-default" type="button">难度+1</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="row"><br><br></div>
+                <div class="row">
+                    <div class="btn-group" role="group">
+                        <button id="undo-button" type="button" class="btn btn-lg btn-default">
+                            <img src="./fonts/glyphicons-436-undo.png">
+                        </button>
+                        <button id="redo-button" type="button" class="btn btn-lg btn-default">
+                            <img src="./fonts/glyphicons-435-redo.png">
+                        </button>
+                        <button id="delete-button" type="button" class="btn btn-lg btn-default">
+                            <img src="./fonts/glyphicons-208-remove.png">
+                        </button>
+                        <button id="mark-button" type="button" class="btn btn-lg btn-default">
+                            <img src="./fonts/glyphicons-338-pin-flag.png">
+                        </button>
+                    </div>
+                </div>
+                <div class="row"><br></div>
+                <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-9">
+                            <button id="number-1-button" type="button" class="btn btn-lg btn-default number-button">1</button>
+                            <button id="number-2-button" type="button" class="btn btn-lg btn-default number-button">2</button>
+                            <button id="number-3-button" type="button" class="btn btn-lg btn-default number-button">3</button>
+                            <br>
+                            <button id="number-4-button" type="button" class="btn btn-lg btn-default number-button">4</button>
+                            <button id="number-5-button" type="button" class="btn btn-lg btn-default number-button">5</button>
+                            <button id="number-6-button" type="button" class="btn btn-lg btn-default number-button">6</button>
+                            <br>
+                            <button id="number-7-button" type="button" class="btn btn-lg btn-default number-button">7</button>
+                            <button id="number-8-button" type="button" class="btn btn-lg btn-default number-button">8</button>
+                            <button id="number-9-button" type="button" class="btn btn-lg btn-default number-button">9</button>
+                        </div>
+                </div>
+			</div>
+		</div>
+	</div>
+	<footer>
+	</footer>
+    <script type="text/javascript" src="qrc:///qtwebchannel/qwebchannel.js"></script>
+	<script type="text/javascript" src="js/cell.button.js"></script>
+	<script type="text/javascript" src="js/cell.game-board.js"></script>
+    <script type="text/javascript" src="js/sudoku.js"></script>
+    <script type="text/javascript" src="js/timer.js"></script>
+</body>
+</html>

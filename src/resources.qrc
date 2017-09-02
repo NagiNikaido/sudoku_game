@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>UI/index.html</file>
+        <file>UI/css/bootstrap-theme.css</file>
+        <file>UI/css/bootstrap.css</file>
+        <file>UI/css/cell.button.css</file>
+        <file>UI/css/cell.game-board.css</file>
+        <file>UI/fonts/glyphicons-208-remove.png</file>
+        <file>UI/fonts/glyphicons-338-pin-flag.png</file>
+        <file>UI/fonts/glyphicons-435-redo.png</file>
+        <file>UI/fonts/glyphicons-436-undo.png</file>
+        <file>UI/js/bootstrap.js</file>
+        <file>UI/js/cell.game-board.js</file>
+        <file>UI/js/jquery.min.js</file>
+        <file>UI/js/sudoku.js</file>
+        <file>UI/js/timer.js</file>
+    </qresource>
+</RCC>

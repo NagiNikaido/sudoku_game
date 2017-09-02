@@ -1,0 +1,69 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[BoldFont,SlantFont,CJKsetspaces,CJKchecksingle]{xeCJK}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{tikz,pgfplots}
+\usepackage{pifont}
+\usetikzlibrary{arrows,scopes,svg.path,shapes,shadows,positioning,decorations.markings}
+\usepackage{verbatim}
+\usepackage[colorlinks,linkcolor=black,anchorcolor=blue,citecolor=green,filecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{cleveref}
+\usepackage{mathrsfs}
+
+\parindent 2em
+
+\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi_GB2312]{SimSun}
+\setCJKmonofont{SimSun}
+
+\newtheorem{lemma}{\textbf{引理}}
+\newtheorem{theorem}{\textbf{定理}}
+
+
+\title{Sudoku Game Report}
+
+\author{计64~~陶东来~~~学号:2016011322}
+
+\begin{document}
+    \maketitle
+    \section{概述}
+
+    本次大作业，我本来想使用传统的Qt来完成。但我在实现过程中发现，我难以简洁地达成我想要的效果。并且，Qt的QSS并不像CSS那样有
+    方便的工具（jQuery）来辅助处理。因此我选择转换思路，把工程分解成了由html+css+js管理的前端，和用Qt管理的后端，通过QWebEngine和
+    QWebChannel来进行前后端的交互。
+
+    必须说明的是，本次所实现的版本仅仅是一个“原型”。更多的视觉效果，如动画，可以在前端中较为方便地扩展出来（使用keyframe），比起单纯
+    的Qt要简单得多。这也是我使用这种设计的重要原因之一。
+
+    \section{前端}
+
+    前端使用了jQuery和bootstrap来辅助实现，通过js来管理游戏的整体运行时逻辑。
+
+    \section{后端}
+
+    后端的Qt主要负责数独盘面的产生，并通过QWebChannel传输至前端。并且，通过Qt后端，游戏进度的保存也成为可能。
+
+    \section{数独的求解及生成}
+
+    数独的求解使用了经典的DLX(Dancing Link X)算法。数独的生成则参考了同学交流时所提到的Las Vegas+贪心挖洞算法。
+    而难度则直观地表现在盘面空格的个数上。难度大于等于$x$时，盘面上的空格数应至少为$10+5x$个。
+
+    \section{值得加入的改进}
+
+    通过加入动画让UI更为炫酷；
+
+    保存最佳成绩；
+
+    等等。
+
+\end{document}
