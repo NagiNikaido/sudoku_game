@@ -2,4 +2,9 @@
 \BOOKMARK [1][-]{section.2}{前端}{}% 2
 \BOOKMARK [1][-]{section.3}{后端}{}% 3
 \BOOKMARK [1][-]{section.4}{数独的求解及生成}{}% 4
-\BOOKMARK [1][-]{section.5}{值得加入的改进}{}% 5
+\BOOKMARK [2][-]{subsection.4.1}{数独的求解——DLX}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{数独的生成——Las Vegas+贪心挖洞}{section.4}% 6
+\BOOKMARK [3][-]{subsubsection.4.2.1}{生成合法终盘——Las Vegas}{subsection.4.2}% 7
+\BOOKMARK [3][-]{subsubsection.4.2.2}{挖洞——贪心法}{subsection.4.2}% 8
+\BOOKMARK [1][-]{section.5}{值得加入的改进}{}% 9
+\BOOKMARK [1][-]{section.6}{吐槽}{}% 10

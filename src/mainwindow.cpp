@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Sudoku Game");
     view = new QWebEngineView(this);
     dialog = new Dialog(this);
     channel = new QWebChannel(this);

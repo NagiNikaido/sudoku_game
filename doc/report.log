@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2016.9.24)  3 SEP 2017 02:48
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2016.9.24)  4 SEP 2017 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1725,7 +1725,7 @@ Normal \count register pool exhausted, switching to extended pool.
 Package: xeCJK-listings 2013/12/08 v3.2.9 xeCJK patch file for listings
 \l__xeCJK_listings_flag_int=\count278
 )
-No file report.aux.
+(./report.aux)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -1744,7 +1744,7 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 37.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 37.
-(/usr/share/texmf/tex/latex/tipa/t3cmr.fd
+ (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 37.
@@ -1835,6 +1835,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 37.
 LaTeX Info: Redefining \pageref on input line 37.
 LaTeX Info: Redefining \nameref on input line 37.
+
+(./report.out) (./report.out)
 \@outlinefile=\write4
 \openout4 = `report.out'.
 
@@ -1866,24 +1868,36 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 69.
+File: new_game_lvl1.png Graphic file (type QTm)
 
-[1
+<use  "new_game_lvl1.png" >
+File: playing_lvl10.png Graphic file (type QTm)
+ <use  "playing_lvl10.png" >
+File: playing_lvl1.png Graphic file (type QTm)
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
+<use  "playing_lvl1.png" >
+File: win_lvl1.png Graphic file (type QTm)
+ <use  "win_lvl1.png" > [1
+
+] [2] [3]
+File: generator.png Graphic file (type QTm)
+
+<use  "generator.png" >
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
  (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 69.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 69.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 154.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 154.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
  ) 
 Here is how much of TeX's memory you used:
- 44451 strings out of 493918
- 968598 string characters out of 6150563
- 1116771 words of memory out of 5000000
- 47066 multiletter control sequences out of 15000+600000
- 12175 words of font info for 68 fonts, out of 8000000 for 9000
+ 44542 strings out of 493918
+ 971587 string characters out of 6150563
+ 1124772 words of memory out of 5000000
+ 47141 multiletter control sequences out of 15000+600000
+ 12199 words of font info for 71 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  56i,6n,74p,10429b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.pdf (1 page).
+Output written on report.pdf (4 pages).
